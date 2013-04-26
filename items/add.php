@@ -31,9 +31,10 @@ echo flash();
             <div id="collection-form" class="field">
                 <?php echo $this->formLabel('collection-id', __('Collection'));?>
                 <div class="inputs">
-                    <?php echo $this->formSelect(
+                    <?php 
+                        echo $this->formRadio(
                         'collection_id',
-                        $item->collection_id,
+                        $item->collection_id ? $item->collection_id : 1,
                         array('id' => 'collection-id'),
                         get_table_options('Collection')
                     );?>
