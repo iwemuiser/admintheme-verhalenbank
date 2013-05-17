@@ -1183,6 +1183,23 @@ header nav {
     clear: both;
 }
 
+
+#search-results .Volksverhaal {
+  background-color: #fffffe;
+}
+#search-results .Volksverhaaltype {
+  background-color: #ffd8f5;
+}
+#search-results .File {
+  background-color: #dafcff;
+}
+#search-results .Text {
+  background-color: #fff8da;
+}
+#search-results .Lexicon {
+  background-color: #daffdf;
+}
+
 /* Login  
 ================================================== */
 

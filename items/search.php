@@ -27,11 +27,11 @@ if (!empty($_GET['style'])) {
 
 <?php 
 if ($search_style == "medium"){
-    echo $this->partial('items/search-form-medium.php', array('formAttributes' =>
+    echo $this->partial('items/search-form.php', array('formAttributes' =>
                         array('id'=>'advanced-search-form')));
 }
 elseif ($search_style == "advanced"){
-    echo $this->partial('items/search-form.php', array('formAttributes' =>
+    echo $this->partial('items/search-form-hard.php', array('formAttributes' =>
                         array('id'=>'advanced-search-form')));
 }?>
 <?php
