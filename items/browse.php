@@ -105,7 +105,9 @@ echo item_search_filters();
                         : metadata('item', array('Dublin Core', 'Type'), array('snippet' => 35));
                     ?>
                 </td>
-                <td><?php echo format_date(metadata('item', 'added')); ?></td>
+                <td><?php echo format_date(metadata('item', 'added'));?>
+                    <br><b><?php echo get_db()->getTable('User')->find(metadata($item, "owner_id"))->name; ?></b>
+                </td>
             </tr>
             <?php endforeach; ?>
         </tbody>
