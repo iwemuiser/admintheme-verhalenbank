@@ -44,6 +44,7 @@ echo flash();
     <thead>
         <tr>
         <?php $sortLinks = array(
+                __('ID') => 'id',
                 __('Username') => 'username',
                 __('Real Name') => 'name',
                 __('Email') => 'email',
@@ -56,6 +57,7 @@ echo flash();
     <tbody>
     <?php foreach( $users as $key => $user ): ?>
         <tr class="<?php if (current_user()->id == $user->id) echo 'current-user '; ?><?php if($key%2==1) echo 'even'; else echo 'odd'; ?><?php if(!$user->active): ?> inactive<?php endif; ?>">
+            <td><?php echo html_escape($user->id); ?></td>
             <td>
             <?php echo html_escape($user->username); ?> <?php if(!$user->active): ?>(<?php echo __('inactive'); ?>)<?php endif; ?>
             <ul class="action-links group">
