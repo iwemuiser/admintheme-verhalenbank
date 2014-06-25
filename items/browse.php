@@ -66,7 +66,7 @@ echo item_search_filters();
                     <?php endif; ?>
 
                     <span class="title">
-                    <?php echo link_to_item(); ?>
+                    <?php echo link_to_item(metadata('item', array('Dublin Core', 'Identifier')) . " - " . link_to_item()); ?>
 
                     <?php if(!$item->public): ?>
                     <?php echo __('(Private)'); ?>
